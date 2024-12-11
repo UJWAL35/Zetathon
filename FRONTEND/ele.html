@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrician Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .technician-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #fff;
+            padding: 16px;
+            margin: 10px auto;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .technician-card h2 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .technician-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .technician-card .contact {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .technician-card button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .technician-card button:hover {
+            background-color: #218838;
+        }
+        .booking-form {
+            display: none;
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .booking-form input,
+        .booking-form select,
+        .booking-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .booking-form button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .booking-form button:hover {
+            background-color: #0056b3;
+        }
+        .thank-you-message {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #d4edda;
+            border-radius: 8px;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <h1>Electrician Details</h1>
+
+    <!-- Technician 1 Card -->
+    <div class="technician-card" id="technician-1">
+        <h2>Dhanush</h2>
+        <p><strong>Specialization:</strong> Electrician</p>
+        <p><strong>Experience:</strong> 15 Years</p>
+        <p><strong>Contact:</strong> <span class="contact">+91 234 567 5890</span></p>
+        <p><strong>Email:</strong> Dhanush@example.com</p>
+        <button onclick="showBookingForm('Dhanush', 'Dhanush@example.com')">Book Now</button>
+    </div>
+
+    <!-- Technician 2 Card -->
+    <div class="technician-card" id="technician-2">
+        <h2>Rohit</h2>
+        <p><strong>Specialization:</strong> Electrician</p>
+        <p><strong>Experience:</strong> 7 Years</p>
+        <p><strong>Contact:</strong> <span class="contact">+91 187 656 7221</span></p>
+        <p><strong>Email:</strong> Rohit@example.com</p>
+        <button onclick="showBookingForm('Rohit', 'Rohit@example.com')">Book Now</button>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="booking-form" id="booking-form">
+        <h2>Book a Service</h2>
+        <form id="book-form" action="submit-booking.php" method="POST">
+            <input type="text" id="customer-name" name="customer-name" placeholder="Your Name" required>
+            <input type="email" id="customer-email" name="customer-email" placeholder="Your Email" required>
+            <input type="text" id="customer-contact" name="customer-contact" placeholder="Your Contact Number" required>
+            <input type="date" id="service-date" name="service-date" required>
+            <input type="hidden" id="selected-technician" name="technician">
+            <input type="hidden" id="technician-email" name="technician-email">
+            <button type="submit">Submit Booking</button>
+        </form>
+    </div>
+
+    <!-- Thank You Message -->
+    <div class="thank-you-message" id="thank-you-message">
+        <p>Thank you for booking! Our technician will contact you shortly.</p>
+    </div>
+
+    <script>
+        // Function to show the booking form with technician details
+        function showBookingForm(technicianName, technicianEmail) {
+            document.getElementById('booking-form').style.display = 'block';
+            document.getElementById('selected-technician').value = technicianName;
+            document.getElementById('technician-email').value = technicianEmail;
+        }
+
+        // Handle the form submission
+        document.getElementById('book-form').onsubmit = function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Hide the booking form
+            document.getElementById('booking-form').style.display = 'none';
+
+            // Show the thank you message
+            document.getElementById('thank-you-message').style.display = 'block';
+        };
+    </script>
+</body>
+</html>

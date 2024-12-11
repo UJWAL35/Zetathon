@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="newstyles.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script> <!-- Razorpay Checkout Script -->
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="loginpage1.html">Login</a></li>
+        <li><a href="payment-page.html">Payment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="payment-info">
+      <h1><u>Payment Page</u></h1>
+      <p>Choose a payment method and complete your transaction.</p>
+    </section>
+    <a href="payment-page.css">payment-page</a>
+
+    <!-- Razorpay Payment Section -->
+    <section id="razorpay-payment">
+      <h2>Pay via Razorpay</h2>
+      <p>Click the button below to proceed with the payment:</p>
+      <button id="razorpay-button" onclick="payWithRazorpay()">Pay Now</button>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Service Platform. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Function to trigger Razorpay payment
+    function payWithRazorpay() {
+      var options = {
+        key: "your-razorpay-key", // Replace with your Razorpay Key
+        amount: 50000,  // Amount in paise (50000 paise = ₹500)
+        currency: "INR",
+        name: "Service Platform",
+        description: "Payment for Services",
+        image: "https://yourwebsite.com/logo.png", // Your logo URL
+        handler: function (response) {
+          alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+          // You can send the payment response (payment_id) to your server for verification
+        },
+        prefill: {
+          name: "Customer Name",
+          email: "customer@example.com",
+          contact: "9876543210"
+        },
+        notes: {
+          address: "Service address or note"
+        },
+        theme: {
+          color: "#528FF0"  // Change the color to your preference
+        }
+      };
+
+      var rzp1 = new Razorpay(options);
+      rzp1.open(); // Open Razorpay Payment Popup
+    }
+  </script>
+
+</body>
+</html>

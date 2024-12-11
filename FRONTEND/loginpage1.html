@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="newstyles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="code.html">Home</a></li>
+        <!-- <li><a href="register.html">Register</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="login-section">
+      <h1><u>Login</u></h1>
+      <form action="code.html" method="POST"> <!-- Update the action with your login handler -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <!-- Submit Button -->
+        <button type="submit">Login</button>
+      </form>
+      
+      <br>
+      <!-- Link to redirect to a registration page or reset password -->
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
+      <p>Forgot password? <a href="reset-password.html">Reset it</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Service Platform. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

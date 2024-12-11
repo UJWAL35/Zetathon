@@ -1,0 +1,255 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 20px 0;
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+  
+  header nav ul li a:hover {
+    color: #f4f4f9;
+  }
+  
+  /* Welcome Section */
+  #WELCOME {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 8px;
+  }
+  
+  #WELCOME h1 {
+    font-size: 3rem;
+    color: #333;
+  }
+  
+  #WELCOME p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  #WELCOME marquee {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Service Section */
+  #services {
+    padding: 50px 0;
+    background-color: #fff;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  #services h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .service-item {
+    background-color: #f4f4f9;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .service-item p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 50px 0;
+    background-color: #fff;
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #contact ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #contact ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  #contact ul li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  #contact ul li a:hover {
+    color: #0056b3;
+  }
+  
+  /* Query Section */
+  #query {
+    padding: 50px 0;
+    background-color: #fff;
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #query h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #query form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #query input,
+  #query textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  #query button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #query button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Payment Section */
+  #payment {
+    padding: 50px 0;
+    background-color: #fff;
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #payment h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #payment ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #payment ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  #payment a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  #payment a:hover {
+    color: #0056b3;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .service-list {
+      flex-direction: column;
+    }
+  
+    .service-item {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    #services h1,
+    #contact h1,
+    #query h1,
+    #payment h1 {
+      font-size: 2rem;
+    }
+  
+    #query form {
+      width: 90%;
+    }
+  }
+  

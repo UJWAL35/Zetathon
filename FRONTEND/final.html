@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Platform</title>
+  <link rel="stylesheet" href="newstyles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <!-- Link to the login page -->
+        <li><a href="loginpage1.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Welcome Section -->
+    <section id="WELCOME!">
+      <h1><u>Welcome to the Service Platform!!!</u></h1>
+      <p>Connecting you with trusted service providers.</p>
+      <marquee>One-Stop solutions for all your service needs-Anytime,Anywhere!</marquee>
+    </section>
+
+    <!-- Service Categories -->
+    <section id="services">
+      <h1><u>Our Services!</u></h1>
+      <div class="service-list">
+        <div class="service-item" data-category="AC-Technician">
+          <h3>AC-Technician</h3>
+          <a href="ac.html"><img src="https://www.guidebrain.com/wp-content/uploads/2021/08/AC-Repair-Technician.jpg" width="200" height="250"></a>
+          <p>Professional installation, repair, and maintenance of air conditioning systems for optimal performance.</p>
+        
+        </div>
+        <div class="service-item" data-category="Electrician">
+          <h3>Electrical</h3>
+          <a href="ele.html"><img src="https://tse1.mm.bing.net/th?id=OIP.zlQbc1Wd0OSKG092PwB2GwHaE8&pid=Api&P=0&h=180" width="200" height="250"></a>
+          <p>Expert electrical solutions for wiring, lighting, and system maintenance in residential and commercial settings.</p>
+        </div>
+        <div class="service-item" data-category="Carpentry">
+          <h3>Carpentry</h3>
+          <a href="carp.html"><img src="C:\Users\Ujwal Bangera\OneDrive\图片\istockphoto-481628382-612x612.jpg" width="200" height="250"></a>
+          <p>Custom woodwork, furniture construction, and installation of doors, cabinets, and other wooden structures.</p>
+        </div>
+        <div class="service-item" data-category="Plumbing">
+          <h3>Plumbing</h3>
+          <a href="plumb.html"><img src="https://tse1.mm.bing.net/th?id=OIP.JrdnL6OWObm6pp3tO-ghmwHaE6&pid=Api&P=0&h=180" width="200" height="250"></a>
+          <p>Installation, repair, and maintenance of pipes, drains, and plumbing fixtures for residential and commercial properties.</p>
+        </div>
+        <div class="service-item" data-category="Mechanics">
+          <h3>Mechanics</h3>
+          <a href="mech.html"><img src="https://cdn-images-1.medium.com/max/2000/1*JktzC9GrA_l4yz0cCy8a5Q.jpeg" width="200" height="250"></a>
+          <p>Automotive repair and maintenance services for diagnosing and fixing vehicle engine, transmission, and brake issues.</p>
+        </div>
+        <div class="service-item" data-category="Cleaning and Pest Control">
+          <h3>Cleaning and Pest Control</h3>
+          <a href="cnp.html"><img src="https://tse1.mm.bing.net/th?id=OIP.pgmzax6uS1aBOOOdr93pXwHaEK&pid=Api&P=0&h=180" width="200" height="250"></a>
+          <p>Cleaning and pest removal services to maintain a healthy and hygienic living or working space.</p>
+        </div>
+        <div class="service-item" data-category="Home appliances repair">
+          <h3>Home appliances repair</h3>
+          <a href="home.html"><img src="https://a1appliancerepairs.ca/wp-content/uploads/repairman_2.jpg" width="200" height="250"></a>
+          <p>Repair and maintenance of household appliances like refrigerators, washing machines, and ovens.</p>
+        </div>
+        <div class="service-item" data-category="Building Paintings">
+          <h3>Building Paintings</h3>
+          <a href="bp.html"><img src="https://callmsi.com/wp-content/uploads/2020/01/painting-building-1024x683.jpg" width="200" height="250"></a>
+          <p>Professional painting for interior and exterior surfaces, enhancing aesthetics and providing protection.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h1><u>Contact Us</u></h1>
+      <p>If you have any questions or need support, feel free to contact us through the following channels:</p>
+      <ul>
+        <li>Email: support@serviceplatform.com</li>
+        <li>Phone: +1 800 123 4567</li>
+        <li>Address: 123 Service St, City, Country</li>
+      </ul>
+    </section>
+
+    <!-- Any Query Section -->
+    <section id="query">
+      <h1><u>Any Query?</u></h1>
+      <p>If you have any inquiries, please don't hesitate to reach out! Fill out the form below and we will get back to you as soon as possible:</p>
+      <form action="submit-query.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <textarea name="message" placeholder="Your Message" required></textarea><br>
+        <button type="submit">Submit Query</button>
+      </form>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment">
+      <h1><u>Payment Options</u></h1>
+      <p>We offer multiple payment methods for your convenience:</p>
+      <ul>
+        <li>Credit Card</li>
+        <li>Debit Card</li>
+        <li>PayPal</li>
+        <li>Bank Transfer</li>
+      </ul>
+      <p>To make a payment, please visit our <a href="payment-page.html">Payment Portal</a>.</p>
+    </section>
+
+    <!-- Video Call Section -->
+    <section id="video-call">
+      <h1><u>Video Call Consultation</u></h1>
+      <p>Schedule a video call with one of our technicians for remote consultation and troubleshooting.</p>
+      <button onclick="window.location.href='video-call-schedule.html'">Schedule a Video Call</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Service Platform. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
